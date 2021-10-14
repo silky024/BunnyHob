@@ -19,7 +19,7 @@ public class JumpAble : MonoBehaviour
         }
         else if(collision.CompareTag("Spike"))
         {
-            Debug.Log("Trap");
+            Debug.Log("You are DEAD!");
 
             Rigidbody2D rigidbody2d = gameObject.GetComponentInParent<Rigidbody2D>();
             rigidbody2d.AddForce(new Vector2(0, jumpTrap), ForceMode2D.Impulse);
