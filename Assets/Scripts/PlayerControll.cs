@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerControll : MonoBehaviour
 {
     public float speed = 1.0f;
+    //public float jump = 10.0f;
+    //public float jumpTrap = 50.0f;
 
     Rigidbody2D rigidbody;
 
@@ -23,7 +25,12 @@ public class PlayerControll : MonoBehaviour
         {
             f= new Vector2(-speed, 0);
         }
-        
+        /*else if(Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("space bar");
+            rigidbody.AddForce(new Vector2(1, jump),ForceMode2D.Impulse);
+        }*/
+
         rigidbody.AddForce(f);
     }
 }
